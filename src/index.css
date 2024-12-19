@@ -10,3 +10,27 @@
 .heading-lg-light {
   @apply text-3xl font-heading font-semibold text-heading-light-normal_heading;
 }
+
+.button {
+  @apply relative overflow-hidden text-lg font-sans bg-primary text-white px-6 py-2 rounded-sm border border-primary;
+  transition: color 0.3s ease-in-out;
+}
+
+.button::before {
+  content: "";
+  @apply absolute inset-0 bg-white transform scale-x-0 origin-right transition-transform duration-300;
+  z-index: 0;
+}
+
+.button:hover::before {
+  @apply scale-x-100;
+}
+
+.button:hover {
+  @apply text-primary;
+}
+
+/* Ensures text stays on top */
+.button span {
+  @apply relative z-10;
+}
