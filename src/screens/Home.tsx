@@ -1,12 +1,17 @@
-import React from "react";
+import React from 'react';
+import HeroSection from '../components/HeroSection';
+import Specialist from '../components/Specialist';
+import BestDoctors from '../components/BestDoctors';
+import TestBooking from '../components/TestBooking';
 
 const Home = () => {
   return (
-    <div className="felx items-center justify-center">
-      <button className="button">
-        <span>Home</span>
-      </button>
-    </div>
+    <>
+      <HeroSection />
+      <Specialist />
+      <BestDoctors />
+      <TestBooking />
+    </>
   );
 };
 
