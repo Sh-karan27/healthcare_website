@@ -17,7 +17,7 @@
 }
 
 .button::before {
-  content: "";
+  content: '';
   @apply absolute inset-0 bg-white transform scale-x-0 origin-right transition-transform duration-300;
   z-index: 0;
 }
@@ -33,4 +33,14 @@
 /* Ensures text stays on top */
 .button span {
   @apply relative z-10;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+  font-weight: bold;
 }
