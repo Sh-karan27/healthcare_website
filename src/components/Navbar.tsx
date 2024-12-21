@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     return (
         <div
             className={`fixed top-0 left-0 w-full z-50 ${
-                isScrolled ? "bg-heading-dark-section_heading" : "bg-black"
+                isScrolled ? "bg-heading-dark-section_heading" : "bg-transparent"
             } transition-all duration-300`}
         >
             <div className="flex justify-between items-center py-6 px-6 xl:px-12">
