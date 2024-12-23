@@ -29,19 +29,7 @@ export function ImagesSliderDemo() {
             'linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5))',
         }}>
         {/* Add continuous up and down animation to HeroVector images */}
-        <motion.img
-          src={HeroVectorOne}
-          alt=''
-          className='w-[20rem] mt-40'
-          animate={{
-            y: [0, -15, 0], // Keyframes: Initial, move up, and back to original
-          }}
-          transition={{
-            duration: 2, // Total animation duration
-            repeat: Infinity, // Repeat infinitely
-            ease: 'easeInOut', // Smooth easing
-          }}
-        />
+        
 
         <div className='flex flex-col items-center justify-center gap-5'>
           <motion.p className='font-bold text-2xl md:text-5xl text-center text-white'>
@@ -96,19 +84,7 @@ export function ImagesSliderDemo() {
           </div>
         </div>
 
-        <motion.img
-          src={HeroVectorTwo}
-          alt=''
-          className='w-[20rem] mb-40'
-          animate={{
-            y: [0, -15, 0], // Keyframes: Initial, move up, and back to original
-          }}
-          transition={{
-            duration: 2, // Total animation duration
-            repeat: Infinity, // Repeat infinitely
-            ease: 'easeInOut', // Smooth easing
-          }}
-        />
+        
       </motion.div>
     </ImagesSlider>
   );
