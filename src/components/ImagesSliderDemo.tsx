@@ -5,8 +5,6 @@ import { BsBank2 } from 'react-icons/bs';
 import { GiRibbonMedal } from 'react-icons/gi';
 import { FaUserDoctor } from 'react-icons/fa6';
 import { FiSearch } from 'react-icons/fi';
-import { HeroVectorOne } from '../data/hero_section';
-import { HeroVectorTwo } from '../data/hero_section';
 
 export function ImagesSliderDemo() {
   return (
@@ -29,7 +27,6 @@ export function ImagesSliderDemo() {
             'linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5))',
         }}>
         {/* Add continuous up and down animation to HeroVector images */}
-        
 
         <div className='flex flex-col items-center justify-center gap-5'>
           <motion.p className='font-bold text-2xl md:text-5xl text-center text-white'>
@@ -83,8 +80,6 @@ export function ImagesSliderDemo() {
             </div>
           </div>
         </div>
-
-        
       </motion.div>
     </ImagesSlider>
   );
