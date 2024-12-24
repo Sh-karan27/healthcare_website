@@ -46,30 +46,37 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Desktop nav items */}
-        <div className='hidden xl:flex justify-center items-center gap-12 font-heading text-[15px] font-semibold text-white'>
-          <div className='cursor-pointer relative group'>
+        <div className='hidden xl:flex justify-center items-center gap-8 font-heading text-[15px] font-semibold text-white'>
+          <div className='cursor-pointer relative group text-lg'>
             Book a Doctor
-            <span className='absolute left-0 bottom-[-2px] w-0 h-[2px] bg-text-light transition-all duration-300 group-hover:w-full'></span>
+            <span className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${isScrolled ? "bg-white" : "bg-text-light" } transition-all duration-300 group-hover:w-full `}></span>
           </div>
-          <div className='cursor-pointer relative group'>
+          <div className='cursor-pointer relative group text-lg'>
             Explore Services
-            <span className='absolute left-0 bottom-[-2px] w-0 h-[2px] bg-text-light transition-all duration-300 group-hover:w-full'></span>
+            <span className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${isScrolled ? "bg-white" : "bg-text-light" } transition-all duration-300 group-hover:w-full `}></span>
           </div>
-          <div className='cursor-pointer relative group'>
+          <div className='cursor-pointer relative group text-lg'>
             Create ABHA
-            <span className='absolute left-0 bottom-[-2px] w-0 h-[2px] bg-text-light transition-all duration-300 group-hover:w-full'></span>
+            <span className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${isScrolled ? "bg-white" : "bg-text-light" } transition-all duration-300 group-hover:w-full `}></span>
           </div>
-          <div className='cursor-pointer relative group'>
+          <div className='cursor-pointer relative group text-lg'>
             My Care
-            <span className='absolute left-0 bottom-[-2px] w-0 h-[2px] bg-text-light transition-all duration-300 group-hover:w-full'></span>
+            <span className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${isScrolled ? "bg-white" : "bg-text-light" } transition-all duration-300 group-hover:w-full `}></span>
           </div>
         </div>
 
         {/* Desktop nav buttons */}
         <div className='hidden xl:flex justify-between items-center gap-8'>
-          <button className='bg-text-light text-white font-semibold px-4 py-2 rounded-lg text-[18px] font-heading tracking-wider hover:bg-heading-light-normal_heading transition-all duration-200'>
+          <button 
+            className={`
+              font-semibold px-4 py-2 rounded-lg text-[18px] font-heading tracking-wider 
+              transition-all duration-200 
+              ${isScrolled ? "bg-white text-text-light hover:text-gray-700" : "bg-text-light text-white hover:bg-heading-light-normal_heading"}
+            `}
+          >
             Download App
           </button>
+
 
           <button className='bg-transparent border border-white px-4 py-2 rounded-lg text-white text-[18px] font-semibold font-heading tracking-wider'>
             Sign In
