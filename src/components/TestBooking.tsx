@@ -1,4 +1,3 @@
-
 import React from "react";
 import { HealthCondition, healthConditions } from "../data/healthConditions";
 
@@ -12,7 +11,7 @@ const ConditionCard: React.FC<{ condition: HealthCondition }> = ({ condition }) 
         {condition.title}
       </span>
 
-      <div className="absolute top-0 right-0 -mt-3 -mr-3 z-20 bg-[#74C69D] text-white p-2 rounded-full">
+      <div className="absolute top-0 right-0 -mt-3 -mr-3 z-20 bg-[#74C69D] text-white p-5 rounded-full">
         <IconComponent className="w-8 h-8" />
       </div>
 
@@ -48,29 +47,29 @@ const TestBooking: React.FC = () => {
           </div>
 
           {/* Updated Image Section */}
-          <div className="grid grid-cols-2 gap-2 w-full max-w-xl mx-auto">
+          <div className="grid grid-cols-2 gap-1 w-full max-w-lg mx-auto">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoN968IjmRo57TBRVEKIPbuz0V-Zhs3Ifbag&s"
+              src="https://images.pexels.com/photos/8450136/pexels-photo-8450136.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Image 1"
-              className="w-48 h-48 object-cover rounded-lg"
+              className="w-full h-64 object-cover rounded-lg"
               loading="lazy"
             />
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC5w7Udf4Q2dfHGgRC3OY5rE_O8MKCw94QpA&s"
+              src="https://images.pexels.com/photos/8850993/pexels-photo-8850993.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Image 2"
-              className="w-48 h-48 object-cover rounded-lg"
+              className="w-full h-64 object-cover rounded-lg"
               loading="lazy"
             />
             <img
-              src="https://cdn.vectorstock.com/i/1000v/14/83/hair-transplantation-card-in-hands-a-man-doctor-vector-38481483.jpg"
+              src="https://images.pexels.com/photos/8450127/pexels-photo-8450127.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Image 3"
-              className="w-48 h-48 object-cover rounded-lg"
+              className="w-full h-64 object-cover rounded-lg"
               loading="lazy"
             />
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSZPapAwfzh5DD3Iocrw71JuScftBAFbYRkA&s"
+              src="https://images.pexels.com/photos/4084639/pexels-photo-4084639.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Image 4"
-              className="w-48 h-48 object-cover rounded-lg"
+              className="w-full h-64 object-cover rounded-lg"
               loading="lazy"
             />
           </div>
