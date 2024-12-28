@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { ImagesSlider } from './ui/images-slider';
-import { hero_section_arr } from '../data/hero_section';
+import { ImagesSlider } from '../ui/images-slider';
+import { hero_section_arr } from '../../data/hero_section';
 import { BsBank2 } from 'react-icons/bs';
 import { GiRibbonMedal } from 'react-icons/gi';
 import { FaUserDoctor } from 'react-icons/fa6';
