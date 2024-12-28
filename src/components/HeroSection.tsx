@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { hero_section_arr } from '../data/hero_section';
-import { ImagesSliderDemo } from './ImagesSliderDemo';
+import { ImagesSliderDemo } from './acertinity_ui_components/ImagesSliderDemo';
 
 const HeroSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
