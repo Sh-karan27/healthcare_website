@@ -60,7 +60,7 @@ export function ImagesSliderDemo() {
               placeholder='Explore doctor by name or speciality'
               className='outline-none w-full sm:w-[27rem] p-2 text-gray-400 font-semibold'
             />
-            <button className='bg-primary p-2 rounded-md'>
+            <button className='bg-bacground-light p-2 rounded-md'>
               <FiSearch className='text-white text-lg' />
             </button>
           </div>
@@ -76,7 +76,7 @@ export function ImagesSliderDemo() {
               placeholder='Explore doctor by name or speciality'
               className='outline-none w-full sm:w-[20rem] p-2 text-gray-400 font-semibold'
             />
-            <button className='bg-primary p-2 rounded-full'>
+            <button className='bg-bacground-light p-2 rounded-full'>
               <FiSearch className='text-white text-lg' />
             </button>
           </div>
