@@ -46,10 +46,10 @@ const BestDoctors: React.FC = () => {
 
       {/* Scroll Buttons */}
       <div className='flex items-center justify-center gap-6 mt-8'>
-        <button className='bg-primary text-white p-3 rounded-full shadow-md hover:bg-primary-dark transition'>
+        <button className='bg-bacground-light text-white p-3 rounded-full shadow-md hover:bg-bacground-light-dark transition'>
           <FaLongArrowAltLeft className='text-xl' />
         </button>
-        <button className='bg-primary text-white p-3 rounded-full shadow-md hover:bg-primary-dark transition'>
+        <button className='bg-bacground-light text-white p-3 rounded-full shadow-md hover:bg-bacground-light-dark transition'>
           <FaLongArrowAltRight className='text-xl' />
         </button>
       </div>
