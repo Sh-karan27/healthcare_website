@@ -35,17 +35,17 @@ export function ImagesSliderDemo() {
           {/* Info Section */}
           <div className='flex flex-wrap gap-4 text-lg sm:text-xl font-semibold text-white justify-center'>
             <div className='flex items-center gap-1'>
-              <BsBank2 className='text-lg sm:text-xl text-primary' />
+              <BsBank2 className='text-lg sm:text-xl text-bacground-light' />
               <span>From the Best Hospitals and Colleges</span>
             </div>
             <span className='hidden sm:block'>|</span>
             <div className='flex items-center gap-1'>
-              <GiRibbonMedal className='text-lg sm:text-xl text-primary' />
+              <GiRibbonMedal className='text-lg sm:text-xl text-bacground-light' />
               <span>4.8+ Rating</span>
             </div>
             <span className='hidden sm:block'>|</span>
             <div className='flex items-center gap-1'>
-              <FaUserDoctor className='text-lg sm:text-xl text-primary' />
+              <FaUserDoctor className='text-lg sm:text-xl text-bacground-light' />
               <span>Available online and in-clinic</span>
             </div>
           </div>
