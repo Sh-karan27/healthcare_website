@@ -68,7 +68,7 @@ import HeartImage from '../assets/Heart3D.png';
 
 const Cardiac = () => {
   return (
-    <div className='min-h-screen w-full flex flex-col items-center justify-evenly bg-gradient-to-l from-text-light to-white p-8'>
+    <div className='min-h-screen w-full flex flex-col items-center justify-evenly bg-gradient-to-r from-text-light to-white p-8'>
       <h1 className='text-6xl font-extrabold text-heading-light-section_heading drop-shadow-md'>
         A Heart Full of Health
       </h1>
