@@ -109,3 +109,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.appointment_card_hover:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  scale: 1.5;
+  background-color: rgb(112, 199, 162);
+}

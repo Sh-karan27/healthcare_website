@@ -1,9 +1,9 @@
-import AppointmentSection from '../components/acertinity_ui_components/AppointmentSection';
+import AppointmentSection from '../components/AppointmentSection';
 import AppSection from '../components/AppSection';
 
 const BookAppointment = () => {
   return (
-    <div className='flex items-center justify-center'>
+    <div className='min-h-screen flex flex-col items-center justify-evenly'>
       <AppointmentSection />
       <AppSection />
     </div>
