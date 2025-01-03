@@ -1,5 +1,5 @@
 import React from 'react';
-import EyeCheckupVideo from '../assets/EyesHD.mp4';
+import Eyes from '../assets/Eyes.png';
 
 const EyeCheckup = () => {
   return (
@@ -41,13 +41,7 @@ const EyeCheckup = () => {
 
         <div className='lg:w-1/2 w-full flex flex-col items-center justify-center p-6'>
           <div className='relative w-full max-w-md'>
-            <video
-              className='w-3/4 rounded-full shadow-lg border-4 '
-              src={EyeCheckupVideo}
-              autoPlay
-              muted
-              loop></video>
-            <div className='absolute inset-0 rounded-full '></div>
+            <img src={Eyes} alt='' />
           </div>
           <div className='mt-8 text-center space-y-3'>
             <h3 className='text-2xl lg:text-3xl font-medium text-gray-800'>

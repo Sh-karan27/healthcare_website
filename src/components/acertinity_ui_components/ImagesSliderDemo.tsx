@@ -9,7 +9,7 @@ import { FiSearch } from 'react-icons/fi';
 export function ImagesSliderDemo() {
   return (
     <ImagesSlider
-      className='h-[75vh] sm:h-[60vh] md:h-[70vh]'
+      className='min-h-screen sm:h-[60vh] md:h-[70vh]'
       images={hero_section_arr.map((item) => item.image)}>
       <motion.div
         initial={{

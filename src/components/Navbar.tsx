@@ -5,6 +5,7 @@ import { FaUserDoctor } from 'react-icons/fa6';
 import { LuFlaskConical } from 'react-icons/lu';
 import { IoIosPeople } from 'react-icons/io';
 import { FaRegIdCard } from 'react-icons/fa6';
+import { NavLink } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -47,20 +48,22 @@ const Navbar: React.FC = () => {
 
         {/* Desktop nav items */}
         <div className='hidden xl:flex justify-center items-center gap-8 font-heading text-[15px] font-semibold text-white'>
-          <div className='cursor-pointer relative group text-lg'>
-            Book a Doctor
+          <NavLink
+            to='/appointment'
+            className='cursor-pointer relative group text-lg'>
+            Appointment
             <span
               className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${
                 isScrolled ? 'bg-white' : 'bg-text-light'
               } transition-all duration-300 group-hover:w-full `}></span>
-          </div>
-          <div className='cursor-pointer relative group text-lg'>
-            Explore Services
+          </NavLink>
+          <NavLink to='/test' className='cursor-pointer relative group text-lg'>
+            Test
             <span
               className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${
                 isScrolled ? 'bg-white' : 'bg-text-light'
               } transition-all duration-300 group-hover:w-full `}></span>
-          </div>
+          </NavLink>
           <div className='cursor-pointer relative group text-lg'>
             Create ABHA
             <span

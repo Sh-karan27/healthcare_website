@@ -2,7 +2,7 @@ import React from 'react';
 import SelectTest from '../components/SelectTest';
 import Cardiac from '../components/Cardiac';
 import Anatomy from '../components/Anatomy';
-import EyeCheckup from '@/components/EyeCheckUp';
+import EyeCheckup from '@/components/EyeCheckup';
 
 const BookingTest = () => {
   return (
