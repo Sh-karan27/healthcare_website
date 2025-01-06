@@ -23,7 +23,7 @@ const BloodPressureGraph = () => {
   return (
     <div className='bg-white shadow-sm rounded-lg p-6'>
       <h2 className='text-xl  text-text-light font-semibold mb-4'>
-        Close Monitoring
+        Close Monitoring of patient
       </h2>
       <div>
         <h3 className='text-sm font-medium text-gray-500 mb-2'>
