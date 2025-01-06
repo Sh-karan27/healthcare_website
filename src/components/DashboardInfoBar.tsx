@@ -6,7 +6,7 @@ import { IoPersonSharp } from 'react-icons/io5';
 
 const DashboardInfoBar = () => {
   return (
-    <div className='w-full lg:w-3/4 bg-gradient-to-l from-text-light to-white  shadow-2xl flex flex-wrap items-center justify-evenly h-auto p-4 rounded-md mt-8'>
+    <div className='w-full lg:w-3/4 bg-gradient-to-r from-text-light to-white  shadow-2xl flex flex-wrap items-center justify-evenly h-auto p-4 rounded-md mt-8'>
       {[
         {
           color: 'bg-red-400',

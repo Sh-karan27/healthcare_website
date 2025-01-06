@@ -2,13 +2,14 @@ import DashboardAppointment from '@/components/DashboardAppointment';
 import DashboardGraph from '@/components/DashboardGraph';
 import DashboardInfoBar from '@/components/DashboardInfoBar';
 import DashboardSidebar from '@/components/DashboardSidebar';
+import Sidebar from '@/components/SidebarPatientDashboard';
 
 const Dashboard = () => {
   return (
-    <div className='w-full h-screen flex flex-col items-center justify-between lg:flex-row bg-gradient-to-r from-text-light to-white'>
+    <div className='w-full h-screen flex flex-col items-center justify-between lg:flex-row bg-gradient-to-l from-text-light to-white'>
       {/* Sidebar */}
       <div className='lg:w-[17rem] w-full bg-transparent'>
-        <DashboardSidebar />
+        <Sidebar />
       </div>
 
       {/* Main Content */}
