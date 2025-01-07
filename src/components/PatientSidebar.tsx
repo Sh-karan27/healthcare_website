@@ -6,13 +6,13 @@ import {
   FaCogs,
   FaSignOutAlt,
 } from 'react-icons/fa';
-import { FaPerson } from 'react-icons/fa6';
 import { FaUserDoctor } from 'react-icons/fa6';
 import { BiSearch, BiBarChartAlt2 } from 'react-icons/bi';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
-import { FaNotesMedical } from 'react-icons/fa';
+import { BsClipboardData } from 'react-icons/bs';
+import { BsGraphUpArrow } from 'react-icons/bs';
 
-const Sidebar = () => {
+const PatientSidebar = () => {
   const [isOpen, setIsOpen] = useState(true); // State to manage sidebar open/close
 
   const toggleSidebar = () => {
@@ -61,20 +61,21 @@ const Sidebar = () => {
           {isOpen && <span>Appointments</span>}
         </li>
         <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
+          <BsGraphUpArrow size={20} className='text-text-light' />
+          {isOpen && <span>Analysis</span>}
+        </li>
+        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
           <FaUserDoctor size={20} className='text-text-light' />
           {isOpen && <span>Doctors</span>}
         </li>
-        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <FaPerson size={20} className='text-text-light' />
-          {isOpen && <span>Patients</span>}
-        </li>
+
         <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
           <FaPills size={20} className='text-text-light' />
-          {isOpen && <span>Parmacy</span>}
+          {isOpen && <span>Medication</span>}
         </li>
         <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <FaNotesMedical size={20} className='text-text-light' />
-          {isOpen && <span>Blogs</span>}
+          <BsClipboardData size={20} className='text-text-light' />
+          {isOpen && <span>Sensor Data</span>}
         </li>
       </ul>
 
@@ -95,4 +96,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default PatientSidebar;

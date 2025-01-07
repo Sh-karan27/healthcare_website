@@ -153,4 +153,28 @@ export const appointmentData = [
     image:
       'https://plus.unsplash.com/premium_photo-1661685719955-0c8dae8ebad1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
+  {
+    name: 'Dr. Anjali Verma',
+    Gender: 'Female',
+    Time: '10:00 AM',
+    Date: '20 Jan 2022',
+    image:
+      'https://plus.unsplash.com/premium_photo-1661685719955-0c8dae8ebad1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+    name: 'Dr. Anjali Verma',
+    Gender: 'Female',
+    Time: '10:00 AM',
+    Date: '20 Jan 2022',
+    image:
+      'https://plus.unsplash.com/premium_photo-1661685719955-0c8dae8ebad1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+    name: 'Dr. Anjali Verma',
+    Gender: 'Female',
+    Time: '10:00 AM',
+    Date: '20 Jan 2022',
+    image:
+      'https://plus.unsplash.com/premium_photo-1661685719955-0c8dae8ebad1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
 ];

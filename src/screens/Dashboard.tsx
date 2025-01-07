@@ -1,7 +1,6 @@
 import DashboardAppointment from '@/components/DashboardAppointment';
 import DashboardGraph from '@/components/DashboardGraph';
 import DashboardInfoBar from '@/components/DashboardInfoBar';
-import DashboardSidebar from '@/components/DashboardSidebar';
 import Sidebar from '@/components/SidebarPatientDashboard';
 
 const Dashboard = () => {
@@ -13,7 +12,7 @@ const Dashboard = () => {
       </div>
 
       {/* Main Content */}
-      <div className=' flex flex-col items-center justify-center lg:justify-center  w-full h-full p-4 gap-10'>
+      <div className=' flex flex-col items-center justify-center  w-full h-full p-4 gap-10'>
         <DashboardInfoBar />
         <DashboardGraph />
         <DashboardAppointment />
