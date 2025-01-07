@@ -30,10 +30,13 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 left-0 w-full z-50 ${
         isScrolled ? 'bg-bacground-light' : 'bg-transparent'
       } transition-all duration-300`}>
-      <div className='flex justify-between items-center py-6 px-6 xl:px-12'>
+      <div className='flex justify-between items-center py-6 px-6 '>
         {/* logo */}
         <div>
-          <h1 className='bg-gray-300 bg-clip-text text-transparent font-bold text-3xl xl:text-5xl'>
+          <h1
+            className={`${
+              isScrolled ? 'bg-white' : 'bg-gray-500'
+            } bg-clip-text text-transparent font-bold text-xl xl:text-3xl`}>
             meddo health
           </h1>
         </div>
@@ -50,34 +53,48 @@ const Navbar: React.FC = () => {
         <div className='hidden xl:flex justify-center items-center gap-8 font-heading text-[15px] font-semibold text-white'>
           <NavLink
             to='/appointment'
-            className='cursor-pointer relative group text-lg'>
+            className={`cursor-pointer relative group text-lg ${
+              isScrolled ? 'text-white' : 'text-gray-500'
+            }`}>
             Appointment
             <span
               className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${
-                isScrolled ? 'bg-white' : 'bg-text-light'
+                isScrolled ? 'bg-white' : 'bg-gray-500'
               } transition-all duration-300 group-hover:w-full `}></span>
           </NavLink>
-          <NavLink to='/test' className='cursor-pointer relative group text-lg'>
+          <NavLink
+            to='/test'
+            className={`cursor-pointer relative group text-lg ${
+              isScrolled ? 'text-white' : 'text-gray-500'
+            }`}>
             Test
             <span
               className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${
-                isScrolled ? 'bg-white' : 'bg-text-light'
+                isScrolled ? 'bg-white' : 'bg-gray-500'
               } transition-all duration-300 group-hover:w-full `}></span>
           </NavLink>
-          <div className='cursor-pointer relative group text-lg'>
+          <NavLink
+            to='/dashboard'
+            className={`cursor-pointer relative group text-lg ${
+              isScrolled ? 'text-white' : 'text-gray-500'
+            }`}>
             Create ABHA
             <span
               className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${
-                isScrolled ? 'bg-white' : 'bg-text-light'
+                isScrolled ? 'bg-white' : 'bg-gray-500'
               } transition-all duration-300 group-hover:w-full `}></span>
-          </div>
-          <div className='cursor-pointer relative group text-lg'>
+          </NavLink>
+          <NavLink
+            to='/'
+            className={`cursor-pointer relative group text-lg ${
+              isScrolled ? 'text-white' : 'text-gray-500'
+            }`}>
             My Care
             <span
               className={`absolute left-0 bottom-[-2px] w-0 h-[2px] ${
-                isScrolled ? 'bg-white' : 'bg-text-light'
+                isScrolled ? 'bg-white' : 'bg-gray-500'
               } transition-all duration-300 group-hover:w-full `}></span>
-          </div>
+          </NavLink>
         </div>
 
         {/* Desktop nav buttons */}
@@ -89,13 +106,18 @@ const Navbar: React.FC = () => {
               ${
                 isScrolled
                   ? 'bg-white text-text-light hover:text-gray-700'
-                  : 'bg-text-light text-white hover:bg-heading-light-normal_heading'
+                  : 'bg-gray-500 text-white hover:bg-heading-light-normal_heading'
               }
             `}>
             Download App
           </button>
 
-          <button className='bg-transparent border border-white px-4 py-2 rounded-lg text-white text-[18px] font-semibold font-heading tracking-wider'>
+          <button
+            className={` border ${
+              isScrolled
+                ? 'border-white text-white'
+                : 'text-white border-gray-500 bg-gray-500'
+            } px-4 py-2 rounded-lg  text-[18px] font-semibold font-heading tracking-wider`}>
             Sign In
           </button>
         </div>
