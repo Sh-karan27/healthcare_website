@@ -9,7 +9,7 @@ import BookingTest from "./screens/BookingTest";
 import Error from "./screens/Error";
 import Footer from "./components/Footer";
 import BookAppointment from "./screens/BookAppointment";
-import PatientDashboard from "./screens/PatientDashboard";
+import PatientDashboard from "./screens/Dashboard/patientDashboard/PatientDashboard";
 import DoctorDashboard from "./screens/Dashboard/doctorsDashboard/DoctorDashboard";
 
 const App = () => {
