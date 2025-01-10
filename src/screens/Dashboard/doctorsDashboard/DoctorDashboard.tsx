@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import Sidebar from "./DoctorDashboardSidebar";
-import DoctorAppointment from "./components/DoctorAppointment";
-import DoctorPharmacy from "./components/DoctorPharmacy";
-import DoctorPatient from "./components/DoctorPatient";
-import DoctorBlogs from "./components/DoctorBlogs";
-import DoctorDashboardHome from "./components/DoctorDashboardHome";
+import React, { useState } from 'react';
+import Sidebar from './DoctorDashboardSidebar';
+import DoctorAppointment from './components/DoctorAppointment';
+import DoctorPharmacy from './components/DoctorPharmacy';
+import DoctorPatient from './components/DoctorPatient';
+import DoctorBlogs from './components/DoctorBlogs';
+import DoctorDashboardHome from './components/DoctorDashboardHome';
 
 const DoctorDashboard = () => {
-  const [activeComponent, setActiveComponent] = useState("home"); // Default component
+  const [activeComponent, setActiveComponent] = useState('home'); // Default component
 
   // Function to render the component based on activeComponent
   const renderComponent = () => {
     switch (activeComponent) {
-      case "home":
+      case 'home':
         return <DoctorDashboardHome />;
-      case "appointments":
+      case 'appointments':
         return <DoctorAppointment />;
-      case "pharmacy":
+      case 'pharmacy':
         return <DoctorPharmacy />;
-      case "patients":
+      case 'patients':
         return <DoctorPatient />;
-      case "blogs":
+      case 'blogs':
         return <DoctorBlogs />;
       default:
         return <h1>Welcome to the Dashboard</h1>;
@@ -28,9 +28,9 @@ const DoctorDashboard = () => {
   };
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-evenly lg:flex-row bg-gradient-to-l from-text-light to-white">
+    <div className='w-full h-screen flex flex-col items-center justify-evenly lg:flex-row bg-gradient-to-l from-text-light to-white'>
       {/* Sidebar */}
-      <div className="lg:w-[17rem] w-full bg-transparent">
+      <div className='lg:w-[17rem] w-full bg-transparent'>
         <Sidebar
           activeComponent={activeComponent} // Pass the active component
           setActiveComponent={setActiveComponent}
@@ -38,7 +38,7 @@ const DoctorDashboard = () => {
       </div>
 
       {/* Main Content */}
-      <div className="lg:flex-1 p-4">{renderComponent()}</div>
+      <div className='lg:flex-1 p-4'>{renderComponent()}</div>
     </div>
   );
 };
