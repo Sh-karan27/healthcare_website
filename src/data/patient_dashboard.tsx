@@ -48,8 +48,8 @@ export const patientMenuItems = [
     icon: <FaCalendarAlt size={20} className='text-text-light' />,
   },
   {
-    key: 'analysis',
-    label: 'Analysis',
+    key: 'history',
+    label: 'History',
     icon: <BsGraphUpArrow size={20} className='text-text-light' />,
   },
   {

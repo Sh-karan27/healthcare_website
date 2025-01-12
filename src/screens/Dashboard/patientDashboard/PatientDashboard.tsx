@@ -5,9 +5,10 @@ import PatientDashboardAppointments from './PatientDashboardAppointments';
 import PatientDashboardMedication from './PatientDashboardMedication';
 import PatientDashboardDoctor from './PatientDashboardDoctor';
 import SensorData from './SensorData';
-import PatientDashboardAnalysis from './PatientDashboardAnalysis';
+import PatientDashboardAnalysis from './PatientDashboardHistory';
 import PatientPrescription from './PatientPrescription';
 import PatientLabreport from './PatientLabreport';
+import PatientDashboardHistory from './PatientDashboardHistory';
 
 const PatientDashboard = () => {
   const [activeComponent, setActiveComponent] = useState('home');
@@ -18,8 +19,8 @@ const PatientDashboard = () => {
         return <PatientHomePage />;
       case 'appointments':
         return <PatientDashboardAppointments />;
-      case 'analysis':
-        return <PatientDashboardAnalysis />;
+      case 'history':
+        return <PatientDashboardHistory />;
       case 'doctors':
         return <PatientDashboardDoctor />;
       case 'prescription':
@@ -39,7 +40,7 @@ const PatientDashboard = () => {
         activeComponent={activeComponent} // Pass the active component
         setActiveComponent={setActiveComponent}
       />
-      <div className='lg:flex-1 p-4 w-full h-[85%]'>{renderComponent()}</div>
+      <div className='lg:flex-1 p-4 w-full h-full'>{renderComponent()}</div>
     </div>
   );
 };

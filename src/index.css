@@ -13,13 +13,14 @@
 
 .button {
   @apply relative overflow-hidden text-lg font-sans bg-bacground-light text-white px-6 py-2 rounded-sm border border-primary;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 .button::before {
   content: '';
   @apply absolute inset-0 bg-white transform scale-x-0 origin-right transition-transform duration-300;
-  z-index: 0;
+  z-index: 0; /* Ensure this is below the text and border */
 }
 
 .button:hover::before {
@@ -27,10 +28,10 @@
 }
 
 .button:hover {
-  @apply text-primary;
+  @apply text-red-500 bg-white border-primary; /* Apply text color, background, and border color */
 }
 
-/* Ensures text stays on top */
+/* Ensures text stays on top of the ::before pseudo-element */
 .button span {
   @apply relative z-10;
 }
