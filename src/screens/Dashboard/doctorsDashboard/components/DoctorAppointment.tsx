@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { IoCalendarOutline } from 'react-icons/io5';
+import AppointmentInfoPage from './AppointmentInfoPage';
 
 interface PatientStat {
   title: string;
@@ -25,6 +26,8 @@ const DoctorAppointment = () => {
   const [activeTab, setActiveTab] = useState<'queue' | 'urgent' | 'accepted'>(
     'queue'
   );
+
+  const [toggleModel, setToggleModel] = useState(false);
 
   const patientStats: PatientStat[] = [
     {
@@ -155,6 +158,10 @@ const DoctorAppointment = () => {
     setActiveTab(tab);
   };
 
+  const handleToggleModel = () => {
+    setToggleModel(!toggleModel);
+  };
+
   return (
     <div className='flex flex-col items-center justify-center p-4 w-full h-full gap-5'>
       {/* Header */}
@@ -196,16 +203,16 @@ const DoctorAppointment = () => {
       </div>
 
       {/* Tabs */}
-      <div className='w-full flex gap-4 border-b mb-4 px-4'>
+      <div className='w-full flex gap-4 border-b-2 mb-4 px-4'>
         {Object.keys(patientData).map((tab) => (
           <button
             key={tab}
             onClick={() =>
               handleTabChange(tab as 'queue' | 'urgent' | 'accepted')
             }
-            className={`py-2 px-4 border-b-2 ${
+            className={`py-2 px-4 border-b-2  ${
               activeTab === tab
-                ? 'border-blue-500 text-blue-500'
+                ? 'border-text-light text-text-light'
                 : 'border-transparent text-gray-500'
             }`}>
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -254,6 +261,11 @@ const DoctorAppointment = () => {
                 <strong>Email:</strong> {patient.email}
               </p>
             </div>
+            <h1
+              onClick={() => handleToggleModel()}
+              className='text-text-light underline cursor-pointer'>
+              View Details
+            </h1>
             <div className='mt-4 flex justify-between w-full'>
               <button className='text-text-light border border-text-light rounded px-4 py-2'>
                 Decline
@@ -265,6 +277,9 @@ const DoctorAppointment = () => {
           </div>
         ))}
       </div>
+      {toggleModel && (
+        <AppointmentInfoPage handleToggleModel={handleToggleModel} />
+      )}
     </div>
   );
 };

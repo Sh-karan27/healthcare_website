@@ -1,13 +1,18 @@
 import React from 'react';
+import { IoCloseCircleOutline } from 'react-icons/io5';
 import { FaWhatsapp } from 'react-icons/fa';
 import { IoPhonePortrait } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { FaCheck } from 'react-icons/fa6';
 import { IoCloseSharp } from 'react-icons/io5';
-const AppointmentInfoPage = () => {
+const AppointmentInfoPage = ({ handleToggleModel }) => {
   return (
-    <div className='p-6  flex w-full h-full justify-center items-center fixed-0'>
-      <div className=' rounded-lg bg-white flex flex-col  p-4 justify-evenly w-1/2 h-[75%] gap-3'>
+    <div className='p-6  flex w-full h-full justify-center items-left gap-2 fixed inset-0 bg-black bg-opacity-25 z-50 '>
+      <IoCloseCircleOutline
+        onClick={() => handleToggleModel()}
+        className='text-white text-5xl hover:text-text-light cursor-pointer'
+      />
+      <div className=' rounded-lg bg-white flex flex-col  p-4 justify-evenly w-1/2  gap-3'>
         {/* Header Section */}
         <div className=' p-4 border-2 border-text-light rounded-lg'>
           <div className='flex items-center '>
@@ -144,11 +149,15 @@ const AppointmentInfoPage = () => {
 
         {/* Actions */}
         <div className=' flex justify-end gap-2'>
-          <button className='border-bacground-light border text-text-light px-4 py-2 rounded-lg flex gap-1 items-center '>
+          <button
+            onClick={() => handleToggleModel()}
+            className='border-bacground-light border text-text-light px-4 py-2 rounded-lg flex gap-1 items-center '>
             <IoCloseSharp />
             Decline
           </button>
-          <button className='bg-bacground-light text-white px-4 py-2 rounded-lg flex gap-1 items-center'>
+          <button
+            onClick={() => handleToggleModel()}
+            className='bg-bacground-light text-white px-4 py-2 rounded-lg flex gap-1 items-center'>
             <FaCheck /> Approve
           </button>
         </div>
