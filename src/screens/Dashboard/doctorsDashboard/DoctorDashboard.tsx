@@ -38,7 +38,7 @@ const DoctorDashboard = () => {
       </div>
 
       {/* Main Content */}
-      <div className='lg:flex-1 p-4 min-h-screen w-full mt-20'>
+      <div className='lg:flex-1 p-4 h-full w-full mt-20'>
         {renderComponent()}
       </div>
     </div>

@@ -247,61 +247,63 @@ const DoctorAppointment = () => {
 
       {/* Patient Data */}
       {layout === 'card' ? (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-4'>
-          {patientData[activeTab].map((patient, index) => (
-            <div
-              key={index}
-              className='bg-white shadow rounded-md p-4 flex flex-col items-start justify-center gap-4'>
-              <div className='flex items-center justify-between w-full border-b-2 border-text-light p-2'>
-                <p className='text-sm text-gray-600'>
-                  <strong>ID:</strong> {patient.id}
-                </p>
-                <p className='text-sm text-gray-600'>{patient.category}</p>
-              </div>
-
-              <div className='flex items-center justify-between w-full '>
-                <div className='flex items-center justify-center gap-2'>
-                  <img
-                    src={patient.img}
-                    alt={patient.name}
-                    className='w-10 h-10 rounded-full'
-                  />
-                  <div className='flex flex-col items-left justify-center'>
-                    <h3 className='text-sm font-bold text-gray-500 '>
-                      Patient name
-                    </h3>
-                    <h3 className='text-sm font-bold text-gray-800 '>
-                      {patient.name}
-                    </h3>
-                  </div>
+        <div className='overflow-y-auto h-[100vh] w-full p-4'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-4'>
+            {patientData[activeTab].map((patient, index) => (
+              <div
+                key={index}
+                className='bg-white shadow rounded-md p-4 flex flex-col items-start justify-center gap-4'>
+                <div className='flex items-center justify-between w-full border-b-2 border-text-light p-2'>
+                  <p className='text-sm text-gray-600'>
+                    <strong>ID:</strong> {patient.id}
+                  </p>
+                  <p className='text-sm text-gray-600'>{patient.category}</p>
                 </div>
-                <p className='text-sm text-gray-600'>
-                  <strong>Schedule:</strong> {patient.schedule}
-                </p>
+
+                <div className='flex items-center justify-between w-full '>
+                  <div className='flex items-center justify-center gap-2'>
+                    <img
+                      src={patient.img}
+                      alt={patient.name}
+                      className='w-10 h-10 rounded-full'
+                    />
+                    <div className='flex flex-col items-left justify-center'>
+                      <h3 className='text-sm font-bold text-gray-500 '>
+                        Patient name
+                      </h3>
+                      <h3 className='text-sm font-bold text-gray-800 '>
+                        {patient.name}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className='text-sm text-gray-600'>
+                    <strong>Schedule:</strong> {patient.schedule}
+                  </p>
+                </div>
+                <div className='flex items-center justify-between w-full '>
+                  <p className='text-sm text-gray-600'>
+                    <strong>Phone:</strong> {patient.phone}
+                  </p>
+                  <p className='text-sm text-gray-600'>
+                    <strong>Email:</strong> {patient.email}
+                  </p>
+                </div>
+                <h1
+                  onClick={() => handleToggleModel()}
+                  className='text-text-light underline cursor-pointer'>
+                  View Details
+                </h1>
+                <div className='mt-4 flex justify-between w-full'>
+                  <button className='text-text-light border border-text-light rounded px-4 py-2'>
+                    Decline
+                  </button>
+                  <button className='text-white bg-bacground-light rounded px-4 py-2'>
+                    Approve
+                  </button>
+                </div>
               </div>
-              <div className='flex items-center justify-between w-full '>
-                <p className='text-sm text-gray-600'>
-                  <strong>Phone:</strong> {patient.phone}
-                </p>
-                <p className='text-sm text-gray-600'>
-                  <strong>Email:</strong> {patient.email}
-                </p>
-              </div>
-              <h1
-                onClick={() => handleToggleModel()}
-                className='text-text-light underline cursor-pointer'>
-                View Details
-              </h1>
-              <div className='mt-4 flex justify-between w-full'>
-                <button className='text-text-light border border-text-light rounded px-4 py-2'>
-                  Decline
-                </button>
-                <button className='text-white bg-bacground-light rounded px-4 py-2'>
-                  Approve
-                </button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       ) : (
         <div className='w-full px-4'>
