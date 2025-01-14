@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from './DoctorDashboardSidebar';
 import DoctorAppointment from './components/DoctorAppointment';
-import DoctorPharmacy from './components/DoctorPharmacy';
+import DoctorPharmacy from './components/DoctorPrescription';
 import DoctorPatient from './components/DoctorPatient';
 import DoctorBlogs from './components/DoctorBlogs';
 import DoctorDashboardHome from './components/DoctorDashboardHome';

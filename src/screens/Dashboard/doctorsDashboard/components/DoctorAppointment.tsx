@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { IoCalendarOutline } from 'react-icons/io5';
 import AppointmentInfoPage from './AppointmentInfoPage';
+import { FiPhoneCall } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 interface PatientStat {
   title: string;
@@ -228,26 +230,26 @@ const DoctorAppointment = () => {
       </div>
 
       {/* Tabs */}
-      <div className='w-full flex gap-4 border-b-2 mb-4 px-4'>
-        {Object.keys(patientData).map((tab) => (
-          <button
-            key={tab}
-            onClick={() =>
-              handleTabChange(tab as 'queue' | 'urgent' | 'accepted')
-            }
-            className={`py-2 px-4 border-b-2 ${
-              activeTab === tab
-                ? 'border-text-light text-text-light'
-                : 'border-transparent text-gray-500'
-            }`}>
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
-          </button>
-        ))}
-      </div>
 
       {/* Patient Data */}
       {layout === 'card' ? (
         <div className='overflow-y-auto h-[100vh] w-full p-4'>
+          <div className='w-full flex gap-4 border-b-2 mb-4 px-4'>
+            {Object.keys(patientData).map((tab) => (
+              <button
+                key={tab}
+                onClick={() =>
+                  handleTabChange(tab as 'queue' | 'urgent' | 'accepted')
+                }
+                className={`py-2 px-4 border-b-2 ${
+                  activeTab === tab
+                    ? 'border-text-light text-text-light'
+                    : 'border-transparent text-gray-500'
+                }`}>
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </button>
+            ))}
+          </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-4'>
             {patientData[activeTab].map((patient, index) => (
               <div
@@ -306,39 +308,105 @@ const DoctorAppointment = () => {
           </div>
         </div>
       ) : (
-        <div className='w-full px-4'>
-          <table className='min-w-full bg-white'>
-            <thead>
-              <tr>
-                <th className='py-2 px-4 border-b'>ID</th>
-                <th className='py-2 px-4 border-b'>Name</th>
-                <th className='py-2 px-4 border-b'>Doctor</th>
-                <th className='py-2 px-4 border-b'>Schedule</th>
-                <th className='py-2 px-4 border-b'>Phone</th>
-                <th className='py-2 px-4 border-b'>Email</th>
-                <th className='py-2 px-4 border-b'>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {patientData[activeTab].map((patient, index) => (
-                <tr key={index}>
-                  <td className='py-2 px-4 border-b'>{patient.id}</td>
-                  <td className='py-2 px-4 border-b'>{patient.name}</td>
-                  <td className='py-2 px-4 border-b'>{patient.doctor}</td>
-                  <td className='py-2 px-4 border-b'>{patient.schedule}</td>
-                  <td className='py-2 px-4 border-b'>{patient.phone}</td>
-                  <td className='py-2 px-4 border-b'>{patient.email}</td>
-                  <td className='py-2 px-4 border-b'>
-                    <button
-                      onClick={() => handleToggleModel()}
-                      className='text-text-light underline'>
-                      View Details
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className='mb-8 h-full w-full flex flex-col items-center justify-center '>
+          <div className='text-lg font-semibold mb-4 w-full items-start'>
+            Patient List
+          </div>
+          <div className='rounded-md p-4 h-full w-full flex flex-col gap-5 items-center justify-center'>
+            {[
+              {
+                name: 'Kate Bishop',
+                location: 'New-York, USA',
+                phone: '+1 973 428 1166',
+                branch: 'Dermatology',
+                disease: 'Poison ivy, oak, and sumac',
+              },
+              {
+                name: 'David Morgan',
+                location: 'Austin, USA',
+                phone: '+1 235 679 1238',
+                branch: 'Neurology',
+                disease: 'Depression disorders',
+              },
+              {
+                name: 'John Smith',
+                location: 'Fort Worth, USA',
+                phone: '+1 355 956 3055',
+                branch: 'Ophthalmology',
+                disease: 'Diabetic macular edema',
+              },
+              {
+                name: 'Jack Black',
+                location: 'Charlotte, USA',
+                phone: '+1 003 846 907',
+                branch: 'Psychiatry',
+                disease: 'Schizophrenia',
+              },
+              {
+                name: 'Paul Walker',
+                location: 'Paris, France',
+                phone: '+1 325 856 0875',
+                branch: 'Dermatology',
+                disease: 'Acanthosis nigricans',
+              },
+            ].map((patient, index) => (
+              <div
+                key={index}
+                className='grid grid-cols-[1fr_1fr_1fr_1fr_1fr_1fr] items-center gap-4 border-b-2 bg-white border-text-light p-4 w-full'>
+                <div className='flex items-center gap-4'>
+                  <img
+                    src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww'
+                    alt='patient'
+                    className='w-10 h-10 rounded-full'
+                  />
+                  <div>
+                    <h3 className='text-sm font-bold text-gray-500'>
+                      Patient name
+                    </h3>
+                    <h3 className='text-sm font-bold text-gray-800'>
+                      {patient.name}
+                    </h3>
+                  </div>
+                </div>
+                <div>
+                  <h3 className='text-sm font-bold text-gray-500'>Location</h3>
+                  <h3 className='text-sm font-bold text-gray-800'>
+                    {patient.location}
+                  </h3>
+                </div>
+                <div>
+                  <h3 className='text-sm font-bold text-gray-500'>Phone</h3>
+                  <h3 className='text-sm font-bold text-gray-800'>
+                    {patient.phone}
+                  </h3>
+                </div>
+                <div>
+                  <h3 className='text-sm font-bold text-gray-500'>Branch</h3>
+                  <h3 className='text-sm font-bold text-gray-800'>
+                    {patient.branch}
+                  </h3>
+                </div>
+                <div>
+                  <h3 className='text-sm font-bold text-gray-500'>Disease</h3>
+                  <h3 className='text-sm font-bold text-gray-800'>
+                    {patient.disease}
+                  </h3>
+                </div>
+                <div className='text-center'>
+                  <h3 className='text-sm font-bold text-gray-500'>Action</h3>
+                  <div className='flex items-center justify-center gap-4'>
+                    <FiPhoneCall className='text-2xl text-blue-500 cursor-pointer' />
+                    <FaWhatsapp className='text-2xl text-green-500 cursor-pointer' />
+                  </div>
+                  <h1
+                    onClick={() => handleToggleModel()}
+                    className='text-text-light underline cursor-pointer'>
+                    View Details
+                  </h1>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
