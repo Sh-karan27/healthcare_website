@@ -6,15 +6,14 @@ import { FaDisease } from 'react-icons/fa';
 import { FaNotesMedical } from 'react-icons/fa6';
 import { FaHeartbeat } from 'react-icons/fa';
 import { patient_appointments } from '@/data/patient_dashboard';
-
 const PatientHomePage = () => {
   return (
-    <div className='w-full h-full flex flex-col lg:flex-row ml-8'>
+    <div className='w-full h-full flex items-center justify-between'>
       {/* Main Content */}
       <div className='flex-1 p-6 lg:p-10'>
         {/* Header */}
         <div className='mb-6'>
-          <h1 className='text-3xl lg:text-5xl font-semibold text-text-light'>
+          <h1 className='text-5xl font-semibold text-text-light'>
             Welcome, Monika
           </h1>
           <p className='text-gray-500 text-xl mt-1 flex items-center gap-2'>
@@ -26,13 +25,13 @@ const PatientHomePage = () => {
         {/* Monitoring and Appointment Section */}
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6'>
           {/* Blood Pressure Monitoring */}
-          <div className='bg-white rounded-lg shadow-sm'>
+          <div className='bg-white '>
             <BloodPressureGraph />
           </div>
 
           {/* Next Appointment */}
           <div className='bg-white shadow-sm rounded-lg p-6 flex flex-col items-start gap-2'>
-            <h2 className='text-xl text-text-light font-semibold'>
+            <h2 className='text-xl text-text-light font-semibold  '>
               Next Appointment
             </h2>
             <p className='text-gray-500 font-medium'>Friday, 4 November</p>
@@ -40,23 +39,23 @@ const PatientHomePage = () => {
             <p className='text-text-light text-sm font-semibold'>
               Szpital Uniwersytecki Dębinki 7, 80-211 Gdańsk
             </p>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-2 '>
               <img
                 src='https://plus.unsplash.com/premium_photo-1664476459351-59625a0fef11?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                 alt='Monika Wróbel'
-                className='w-10 h-10 rounded-full'
+                className='w-10 h-10 rounded-full '
               />
               <div>
-                <p className='text-gray-500 text-sm'>Dr. Pawel Kowalski</p>
-                <p className='text-gray-500 text-sm'>Cardiologist</p>
+                <p className='text-gray-500 text-sm '>Dr. Pawel Kowalski</p>
+                <p className='text-gray-500 text-sm '>Cardiologist</p>
               </div>
             </div>
 
             <div className='mt-4 flex gap-2'>
-              <button className='px-4 py-2 text-sm font-medium text-text-light rounded border border-text-light'>
+              <button className='px-4 py-2 text-sm font-medium text-text-light  rounded border border-text-light'>
                 Reschedule
               </button>
-              <button className='px-4 py-2 text-sm font-medium border border-text-light bg-text-light text-white rounded'>
+              <button className='px-4 py-2 text-sm font-medium  border border-text-light bg-text-light text-white rounded '>
                 Details
               </button>
             </div>
@@ -65,7 +64,7 @@ const PatientHomePage = () => {
 
         {/* Prescriptions */}
         <div className='bg-white shadow-sm rounded-lg p-6'>
-          <h2 className='text-xl text-text-light font-semibold mb-4'>
+          <h2 className='text-xl  text-text-light font-semibold mb-4'>
             Prescriptions
           </h2>
           <div className='overflow-x-auto'>
@@ -106,16 +105,16 @@ const PatientHomePage = () => {
           </div>
         </div>
       </div>
-
       {/* Profile Section */}
-      <div className='hidden bg-white shadow-sm p-6 w-full lg:w-80 mx-auto h-full md:flex items-center justify-center mt-6 lg:mt-0'>
+
+      <div className='bg-white shadow-sm  p-6 w-80 mx-auto h-full flex items-center justify-center'>
         <div className='flex flex-col items-center justify-evenly h-full'>
           {/* User Info Section */}
           <div className='flex flex-col items-start mb-2 gap-5'>
             <img
               src='https://plus.unsplash.com/premium_photo-1664476459351-59625a0fef11?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               alt='Monika Wróbel'
-              className='w-[7rem] h-[7rem] rounded-full'
+              className='w-[7rem] h-[7rem] rounded-full mr-4'
             />
             <div>
               <h3 className='text-xl font-medium text-gray-700'>
@@ -126,28 +125,28 @@ const PatientHomePage = () => {
           </div>
 
           {/* Health Details */}
-          <div className='text-sm text-white grid grid-cols-3 gap-4 items-center'>
+          <div className='text-sm text-white grid grid-cols-3 gap-4 items-center '>
             <div className='bg-text-light p-1 rounded-sm'>
-              <p className='font-medium'>Blood</p>
+              <p className=' font-medium'>Blood</p>
               <p>A Rh+</p>
             </div>
             <div className='bg-text-light p-1 rounded-sm'>
-              <p className='font-medium'>Height</p>
+              <p className=' font-medium'>Height</p>
               <p>160 cm</p>
             </div>
             <div className='bg-text-light p-1 rounded-sm'>
-              <p className='font-medium'>Weight</p>
+              <p className=' font-medium'>Weight</p>
               <p>52 kg</p>
             </div>
           </div>
 
           {/* Recent Visit */}
           <div className='p-4 border rounded-md border-text-light'>
-            <h4 className='text-text-light mb-1 font-semibold'>
+            <h4 className=' text-text-light mb-1 font-semibold'>
               Dr. Pawel Kowalski
             </h4>
             <p className='text-xs text-gray-400 mb-2'>02.11.2022</p>
-            <p className='text-sm text-white bg-text-light p-3'>
+            <p className='text-sm text-white bg-text-light p-3 '>
               Your test results are pretty fine. But I’ll prescribe something to
               keep the condition under control.
             </p>
@@ -157,7 +156,7 @@ const PatientHomePage = () => {
           <div className='space-y-4 w-[10rem] text-white'>
             <button className='w-full text-left bg-text-light p-2 rounded-lg flex items-center justify-between shadow'>
               <span className='flex items-center justify-center gap-2'>
-                <FaDisease /> Diseases
+                <FaDisease /> Diseases{' '}
               </span>
               <span className='text-white'>
                 <IoIosArrowForward />

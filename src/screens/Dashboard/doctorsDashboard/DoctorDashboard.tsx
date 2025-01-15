@@ -28,17 +28,17 @@ const DoctorDashboard = () => {
   };
 
   return (
-    <div className='w-full h-full flex flex-col lg:flex-row bg-gradient-to-l from-text-light to-white'>
+    <div className='w-full h-screen flex flex-col items-center justify-evenly lg:flex-row bg-gradient-to-l from-text-light to-white'>
       {/* Sidebar */}
-      <div className='lg:w-[17rem] w-full bg-transparent lg:flex-shrink-0 fixed h-full '>
+      <div className='lg:w-[17rem] w-full bg-transparent'>
         <Sidebar
-          activeComponent={activeComponent}
+          activeComponent={activeComponent} // Pass the active component
           setActiveComponent={setActiveComponent}
         />
       </div>
 
       {/* Main Content */}
-      <div className='flex-1 ml-7 p-4 w-full overflow-y-auto mt-5 lg:mt-0    '>
+      <div className='lg:flex-1 p-4 h-full w-full mt-20'>
         {renderComponent()}
       </div>
     </div>

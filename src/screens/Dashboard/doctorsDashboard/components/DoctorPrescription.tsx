@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaLock } from 'react-icons/fa';
-
 const DoctorPrescription = () => {
   return (
     <div className='p-6 min-h-screen'>
@@ -17,7 +16,7 @@ const DoctorPrescription = () => {
       </div>
 
       {/* Overview Section */}
-      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>
+      <div className='grid grid-cols-3 gap-6 mb-8'>
         <div className='p-4 bg-white shadow rounded-md'>
           <div className='text-2xl font-semibold flex items-center'>
             86 <span className='text-green-500 text-sm ml-2'>+11</span>
@@ -43,9 +42,9 @@ const DoctorPrescription = () => {
       </div>
 
       {/* Prescription Status Section */}
-      <div className='flex flex-col lg:flex-row justify-center gap-5 items-start w-full'>
-        <div className='mb-8 w-full lg:w-3/4'>
-          <div className='font-semibold mb-4 text-gray-600 text-xl'>
+      <div className='flex justify-center gap-5 items-start w-full'>
+        <div className='mb-8 w-3/4'>
+          <div className=' font-semibold mb-4 text-gray-600 text-xl'>
             Prescription Status
           </div>
           <div className='bg-white shadow rounded-md p-4'>
@@ -57,7 +56,7 @@ const DoctorPrescription = () => {
             ].map((med, index) => (
               <div
                 key={index}
-                className='flex flex-col lg:flex-row justify-between items-center border-b last:border-b-0 py-4'>
+                className='flex justify-between items-center border-b last:border-b-0 py-4'>
                 {/* Left Section */}
                 <div className='flex-1'>
                   <div className='font-semibold text-gray-600 text-lg flex items-center gap-2'>
@@ -83,13 +82,12 @@ const DoctorPrescription = () => {
             ))}
           </div>
         </div>
-
-        <div className='w-full'>
-          <div className='font-semibold mb-4 text-gray-600 text-xl'>
+        <div>
+          <div className=' font-semibold mb-4 text-gray-600 text-xl'>
             Upcoming
           </div>
           <div className='bg-white shadow rounded-md p-4'>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col justify-between items-left border-b last:border-b-0 py-4 gap-2'>
               <button className='text-text-light border-text-light border rounded-md p-1'>
                 CONSULT
               </button>
@@ -100,7 +98,7 @@ const DoctorPrescription = () => {
                 <img
                   src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww'
                   alt=''
-                  className='w-12 h-12 rounded-full'
+                  className='w-10 h-10 rounded-full'
                 />
                 <div>
                   <h1 className='font-semibold text-text-light'>
@@ -111,7 +109,7 @@ const DoctorPrescription = () => {
               </div>
               <div className='text-sm text-gray-500'>10:30am - 11:00am</div>
 
-              <div className='flex items-center justify-between mt-4'>
+              <div className='flex items-center justify-between'>
                 <button className='text-text-light border border-text-light rounded-md px-4 py-2 mr-2'>
                   Edit Consult
                 </button>

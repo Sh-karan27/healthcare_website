@@ -33,21 +33,14 @@ const PatientDashboard = () => {
         return <h1>Welcome to the Dashboard</h1>;
     }
   };
-
   return (
-    <div className='w-full h-full flex flex-col lg:flex-row bg-gradient-to-l from-text-light to-white'>
+    <div className='w-full h-screen flex flex-col lg:flex-row items-center justify-between bg-gray-50'>
       {/* Sidebar */}
-      <div className='lg:w-[17rem] w-full bg-transparent lg:flex-shrink-0 fixed lg:relative h-full z-10'>
-        <PatientSidebar
-          activeComponent={activeComponent} // Pass the active component
-          setActiveComponent={setActiveComponent}
-        />
-      </div>
-
-      {/* Main Content */}
-      <div className='lg:flex-1 w-full h-full lg:ml-[17rem] p-4 overflow-y-auto'>
-        {renderComponent()}
-      </div>
+      <PatientSidebar
+        activeComponent={activeComponent} // Pass the active component
+        setActiveComponent={setActiveComponent}
+      />
+      <div className='lg:flex-1 p-4 w-full h-full'>{renderComponent()}</div>
     </div>
   );
 };

@@ -4,21 +4,10 @@ import DashboardInfoBar from '@/screens/Dashboard/doctorsDashboard/DoctorDashboa
 
 const DoctorDashboardHome = () => {
   return (
-    <div className='flex flex-col items-center justify-center w-full h-full p-4 gap-6 md:gap-8 lg:gap-10'>
-      {/* Info Bar */}
-      <div className='w-full max-w-5xl'>
-        <DashboardInfoBar />
-      </div>
-
-      {/* Graph Section */}
-      <div className='w-full max-w-5xl'>
-        <DashboardGraph />
-      </div>
-
-      {/* Appointment Section */}
-      <div className='w-full max-w-5xl'>
-        <DashboardAppointment />
-      </div>
+    <div className=' flex flex-col items-center justify-center  w-full h-full p-4 gap-10'>
+      <DashboardInfoBar />
+      <DashboardGraph />
+      <DashboardAppointment />
     </div>
   );
 };

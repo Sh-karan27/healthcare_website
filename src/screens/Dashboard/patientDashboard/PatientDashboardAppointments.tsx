@@ -33,31 +33,29 @@ const PatientDashboardAppointments = () => {
   return (
     <div className='p-6 rounded-lg flex flex-col items-center justify-center gap-5 w-full h-full mt-14'>
       {/* Header with Appointments and Search */}
-      <div className='w-full flex flex-col lg:flex-row justify-between items-center'>
-        <h2 className='text-3xl font-bold text-gray-700 lg:mb-0 mb-4'>
-          Appointments
-        </h2>
+      <div className='w-full flex justify-between items-center'>
+        <h2 className='text-3xl font-bold text-gray-700'>Appointments</h2>
         <button className='bg-bacground-light text-white px-4 py-2 rounded-md hover:bg-text-light'>
           + New Appointment
         </button>
       </div>
 
-      <div className='w-full flex flex-col lg:flex-row justify-between items-center'>
-        <h2 className='text-lg font-bold text-gray-600 flex items-center gap-2'>
-          <FaCalendarAlt className='text-bacground-light' /> All Appointments
+      <div className='w-full flex justify-between items-center'>
+        <h2 className='text-lg font-bold text-gray-600 flex items-center gap-2 '>
+          <FaCalendarAlt className='text-bacground-light ' /> All Appointments
         </h2>
-        <div className='flex flex-col lg:flex-row items-center gap-4'>
+        <div className='flex items-center gap-4'>
           <input
             type='text'
             placeholder='Search anything here'
-            className='border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-bacground-light w-full lg:w-auto'
+            className='border px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-bacground-light'
           />
           <div className='flex items-center gap-2'>
             <button className='border px-3 py-2 rounded-md text-gray-600 font-semibold'>
               Week
             </button>
-            <div className='border flex gap-2 p-2 rounded-lg'>
-              <FaCalendarAlt className='text-text-light text-xl cursor-pointer' />
+            <div className='border flex gap-2 p-2 rounded-lg '>
+              <FaCalendarAlt className='text-text-light text-xl cursor-pointer ' />
               <FaList className='text-gray-600 text-xl cursor-pointer' />
             </div>
           </div>
@@ -72,7 +70,7 @@ const PatientDashboardAppointments = () => {
             className='text-xl rounded-md border p-1 text-gray-600'>
             <IoIosArrowBack />
           </button>
-          <h3 className='text-lg font-semibold text-gray-600'>
+          <h3 className='text-lg font-semibold text-gray-600 '>
             {monthName} {currentYear}
           </h3>
           <button
@@ -83,8 +81,8 @@ const PatientDashboardAppointments = () => {
         </div>
       </div>
 
-      {/* Calendar Container */}
-      <div className='w-full h-full flex flex-col gap-4'>
+      {/* Fixed Height Calendar */}
+      <div className='w-full h-full flex flex-col gap-2'>
         {/* Calendar Header */}
         <div className='grid grid-cols-7 gap-1 text-center w-full text-bacground-light'>
           <div className='font-semibold'>Sun</div>
@@ -97,17 +95,17 @@ const PatientDashboardAppointments = () => {
         </div>
 
         {/* Calendar Days */}
-        <div className='grid grid-cols-7 gap-1 w-full'>
+        <div className='grid grid-cols-7 gap-1 w-full h-[42rem]'>
           {/* Empty Days */}
           {emptyStartDays.map((_, index) => (
-            <div key={`empty-${index}`} className='h-[5rem]'></div>
+            <div key={`empty-${index}`} className='h-[7rem]'></div>
           ))}
 
           {/* Days of the Month */}
           {daysArray.map((day) => (
             <div
               key={day}
-              className='relative h-[7rem] text-gray-700 border flex items-center justify-center cursor-pointer hover:bg-blue-50'>
+              className='h-[7rem] text-gray-700 border flex p-2 justify-end relative bg-gray-100 hover:bg-blue-50 cursor-pointer'>
               {day}
 
               {/* Example: Adding an appointment on specific dates */}
