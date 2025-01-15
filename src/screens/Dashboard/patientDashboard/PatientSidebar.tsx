@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
-import {
-  FaHome,
-  FaCalendarAlt,
-  FaPills,
-  FaCogs,
-  FaSignOutAlt,
-} from 'react-icons/fa';
-import { FaUserDoctor } from 'react-icons/fa6';
+import { FaCogs, FaSignOutAlt } from 'react-icons/fa';
 import { BiSearch, BiBarChartAlt2 } from 'react-icons/bi';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
-import { BsClipboardData } from 'react-icons/bs';
-import { BsGraphUpArrow } from 'react-icons/bs';
+import { patientMenuItems } from '@/data/patient_dashboard';
 
-const PatientSidebar = () => {
+const PatientSidebar = ({ activeComponent, setActiveComponent }) => {
   const [isOpen, setIsOpen] = useState(true); // State to manage sidebar open/close
 
   const toggleSidebar = () => {
@@ -51,32 +43,18 @@ const PatientSidebar = () => {
       </div>
 
       {/* Menu Items */}
-      <ul className='flex-grow px-4 space-y-2'>
-        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <FaHome size={20} className='text-text-light' />
-          {isOpen && <span>Home</span>}
-        </li>
-        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <FaCalendarAlt size={20} className='text-text-light' />
-          {isOpen && <span>Appointments</span>}
-        </li>
-        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <BsGraphUpArrow size={20} className='text-text-light' />
-          {isOpen && <span>Analysis</span>}
-        </li>
-        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <FaUserDoctor size={20} className='text-text-light' />
-          {isOpen && <span>Doctors</span>}
-        </li>
-
-        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <FaPills size={20} className='text-text-light' />
-          {isOpen && <span>Medication</span>}
-        </li>
-        <li className='flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100'>
-          <BsClipboardData size={20} className='text-text-light' />
-          {isOpen && <span>Sensor Data</span>}
-        </li>
+      <ul className='flex-grow px-4 space-y-2 mt-10'>
+        {patientMenuItems.map((item) => (
+          <li
+            key={item.key}
+            className={`flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100 ${
+              activeComponent === item.key ? 'bg-blue-100' : 'bg-transparent'
+            }`}
+            onClick={() => setActiveComponent(item.key)}>
+            {item.icon}
+            {isOpen && <span>{item.label}</span>}
+          </li>
+        ))}
       </ul>
 
       {/* Footer */}
