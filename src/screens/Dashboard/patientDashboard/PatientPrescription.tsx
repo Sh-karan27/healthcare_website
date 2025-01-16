@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFilePrescription } from 'react-icons/fa';
+import { FaPrescriptionBottle } from 'react-icons/fa6';
 import { GrLocationPin } from 'react-icons/gr';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import { CiCirclePlus } from 'react-icons/ci';
@@ -84,7 +84,7 @@ const PatientPrescription = () => {
   return (
     <div className='grid grid-cols-3 gap-6 p-6 w-full mt-14 h-full'>
       {/* Active Prescriptions */}
-      <div className=' rounded-lg w-full overflow-y-auto'>
+      <div className=' rounded-lg w-full overflow-y-auto p-4'>
         <div className=' flex items-center justify-between'>
           <h2 className='text-lg font-semibold mb-4 text-bacground-light'>
             Active Prescription
@@ -98,8 +98,8 @@ const PatientPrescription = () => {
             <div
               className='flex justify-between w-full p-2 items-start bg-white shadow-md cursor-pointer'
               onClick={() => togglePrescription(index)}>
-              <div className='flex items-center justify-center'>
-                <FaFilePrescription className='text-bacground-light text-4xl' />
+              <div className='flex items-center justify-center gap-2'>
+                <FaPrescriptionBottle className='text-bacground-light text-3xl' />
                 <h3 className='text-md font-bold text-text-light flex flex-col items-left'>
                   {prescription.name}
                   <p className='text-sm text-gray-400'>
@@ -178,7 +178,9 @@ const PatientPrescription = () => {
 
       {/* Patient Notes */}
       <div className=' p-4 rounded-lg max-h-screen overflow-y-auto'>
-        <h2 className='text-lg font-semibold mb-4 text-text-light'>Patient Notes</h2>
+        <h2 className='text-lg font-semibold mb-4 text-text-light'>
+          Patient Notes
+        </h2>
         {patientNotes.map((note, index) => (
           <div
             key={index}
