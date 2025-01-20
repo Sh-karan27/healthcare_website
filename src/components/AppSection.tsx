@@ -5,9 +5,9 @@ import "./AppSection.css";
 
 const AppSection: FC = () => {
     return (
-        <div className="w-full flex sm:flex-col flex-col md:flex-col lg:flex-col xl:flex-row 2xl:flex-row justify-between items-center bg-white px-8 md:px-28 lg:px-28 xl:px-28 py-16">
+        <div className="w-full flex sm:flex-col flex-col md:flex-col lg:flex-col xl:flex-row 2xl:flex-row justify-between items-center bg-white px-8 md:px-28 lg:px-28 xl:px-28 py-16 mx-auto">
         {/* 1st component */}
-        <div className="relative flex justify-center items-center min-w-96 min-h-96 px-4 py-4">
+        <div className="relative flex justify-center items-center min-w-96 min-h-96 md:min-w-[30rem] md:min-h-[30rem] px-4 py-4">
             {/* background circle */}
             <div className="bg-green-200 h-72 w-72 rounded-full"></div>
 
@@ -16,21 +16,21 @@ const AppSection: FC = () => {
             <img src={mobile} alt="Mobile" />
 
             {/* notifications */}
-            <div className="absolute top-40 left-12 sm:-left-10 md:-left-10 lg:-left-10 xl:-left-10 2xl:-left-10 flex w-44 justify-center items-center bg-emerald-500 p-2 rounded-lg gap-2 animate-left-right-left">
+            <div className="absolute top-40 sm:top-52 left-12 sm:left-0 md:left-0 lg:left-0 xl:left-0 2xl:left-0 flex w-44 justify-center items-center bg-emerald-500 p-2 rounded-lg gap-2 animate-left-right-left">
                 <FaCheckCircle className="text-white text-[32px]" />
                 <p className="text-[12px] font-medium text-white leading-relaxed">
                 Most distinguished & celebrated doctors
                 </p>
             </div>
 
-            <div className="absolute top-16 right-12 sm:-right-14 md:-right-14 lg:-right-14 xl:-right-14 2xl:-right-14 flex w-48 justify-center items-center bg-red-500 p-2 rounded-lg gap-2 animate-left-right-right">
+            <div className="absolute top-16 sm:top-20 right-12 sm:-right-3 md:-right-3 lg:-right-3 xl:-right-3 2xl:-right-3 flex w-48 justify-center items-center bg-red-500 p-2 rounded-lg gap-2 animate-left-right-right">
                 <FaCheckCircle className="text-white text-[36px]" />
                 <p className="text-[12px] font-medium text-white leading-relaxed">
                 Get 100% cashback on every appointment booking
                 </p>
             </div>
 
-            <div className="absolute bottom-16 right-12 sm:-right-6 md:-right-6 lg:-right-6 xl:-right-6 2xl:-right-6 flex w-40 justify-center items-center bg-orange-500 p-2 rounded-lg gap-2 animate-left-right-right">
+            <div className="absolute bottom-16 sm:bottom-20 right-20 sm:right-5 md:right-5 lg:right-5 xl:right-5 2xl:right-5 flex w-40 justify-center items-center bg-orange-500 p-2 rounded-lg gap-2 animate-left-right-right">
                 <FaCheckCircle className="text-white text-[26px]" />
                 <p className="text-[12px] font-medium text-white leading-relaxed">
                 Your health at your fingertips
@@ -45,40 +45,40 @@ const AppSection: FC = () => {
             <h1 className="text-2xl md:text-3xl lg:text-3xl xl:text-3xl text-gray-600 font-semibold text-center xl:text-start">
                 Experience one stop care by Meddo Health App
             </h1>
-            <h2 className="text-xl md:text-2xl lg:text-2xl xl:text-2xl font-medium text-red-500 text-center xl:text-start">
+            <h2 className="text-xl md:text-2xl lg:text-2xl xl:text-2xl font-medium text-heading-light-normal_heading text-center xl:text-start">
                 Best Doctor appointment app
             </h2>
             </div>
 
             <div className="flex flex-col gap-3 pl-1">
-            <div className="flex flex-col gap-1">
-                <p className="text-gray-700 text-xl font-medium">Health Records</p>
-                <div className="w-24 h-1 bg-red-500"></div>
+            <div className="flex flex-col gap-1 items-center xl:items-stretch text-center xl:text-start">
+                <p className="text-gray-700 text-xl font-medium text-center xl:text-start">Health Records</p>
+                <div className="w-24 h-1 bg-heading-light-normal_heading"></div>
                 <p className="text-gray-500 text-[16px]">
-                Your Family health bank for anytime access
+                Your Family health bank, anytime access
                 </p>
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 items-center xl:items-stretch text-center xl:text-start">
                 <p className="text-gray-700 text-xl font-medium">
-                Appointment & Diagnostic Bookings Records
+                Appointment Records
                 </p>
-                <div className="w-24 h-1 bg-red-500"></div>
+                <div className="w-24 h-1 bg-heading-light-normal_heading"></div>
                 <p className="text-gray-500 text-[16px]">
                 From the best at your convenience
                 </p>
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 items-center xl:items-stretch text-center xl:text-start">
                 <p className="text-gray-700 text-xl font-medium">
-                Medicine & Follow-Up Reminders
+                Medicine Reminders
                 </p>
-                <div className="w-24 h-1 bg-red-500"></div>
+                <div className="w-24 h-1 bg-heading-light-normal_heading"></div>
                 <p className="text-gray-500 text-[16px]">
                 For the best Doctor-Patient interactions
                 </p>
             </div>
             </div>
 
-            <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden max-w-md justify-center">
+            <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden max-w-md justify-center mx-auto xl:mx-0">
             <input
                 type="tel"
                 placeholder="Enter mobile number"
@@ -89,7 +89,7 @@ const AppSection: FC = () => {
             </button>
             </div>
 
-            <div className="flex justify-center items-center py-4 max-w-md bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full gap-4 text-lg cursor-pointer">
+            <div className="flex justify-center items-center py-4 px-6 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full gap-4 text-lg sm:text-xl cursor-pointer mx-auto xl:mx-0">
             <button>Download App Now</button>
             <FaCloudDownloadAlt className="text-xl font-bold" />
             </div>
