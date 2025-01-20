@@ -5,6 +5,7 @@ import DoctorPharmacy from './components/DoctorPrescription';
 import DoctorPatient from './components/DoctorPatient';
 import DoctorBlogs from './components/DoctorBlogs';
 import DoctorDashboardHome from './components/DoctorDashboardHome';
+import DoctorInbox from './DoctorInbox';
 
 const DoctorDashboard = () => {
   const [activeComponent, setActiveComponent] = useState('home'); // Default component
@@ -20,8 +21,8 @@ const DoctorDashboard = () => {
         return <DoctorPharmacy />;
       case 'patients':
         return <DoctorPatient />;
-      case 'blogs':
-        return <DoctorBlogs />;
+      case 'inbox':
+        return <DoctorInbox />;
       default:
         return <h1>Welcome to the Dashboard</h1>;
     }
