@@ -57,11 +57,7 @@ export const patientMenuItems = [
     label: 'Doctors',
     icon: <FaUserDoctor size={20} className='text-text-light' />,
   },
-  {
-    key: 'sensor data',
-    label: 'Sensor Data',
-    icon: <BsClipboardData size={20} className='text-text-light' />,
-  },
+
   {
     key: 'prescription',
     label: 'Prescription',
