@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import { IoCalendarOutline } from 'react-icons/io5';
-import AppointmentInfoPage from './AppointmentInfoPage';
+import AppointmentInfoPage from './components/AppointmentInfoPage';
 import { FiPhoneCall } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { FaCogs, FaSignOutAlt } from 'react-icons/fa';
 import { BiSearch, BiBarChartAlt2 } from 'react-icons/bi';
 import { BsFillArrowLeftSquareFill } from 'react-icons/bs';
-import { menuItems } from '@/data/doctor_dashboard_data';
-const Sidebar = ({ activeComponent, setActiveComponent }) => {
+import { adminSidebarItems } from '@/data/admin_dashboard_data';
+
+const AdminSidebar = ({ activeComponent, setActiveComponent }) => {
   const [isOpen, setIsOpen] = useState(true); // State to manage sidebar open/close
 
   const toggleSidebar = () => {
@@ -43,7 +44,7 @@ const Sidebar = ({ activeComponent, setActiveComponent }) => {
 
       {/* Menu Items */}
       <ul className='flex-grow px-4 space-y-2 mt-10'>
-        {menuItems.map((item) => (
+        {adminSidebarItems.map((item) => (
           <li
             key={item.key}
             className={`flex items-center space-x-4 p-2 rounded-md cursor-pointer hover:bg-blue-100 ${
@@ -73,4 +74,4 @@ const Sidebar = ({ activeComponent, setActiveComponent }) => {
   );
 };
 
-export default Sidebar;
+export default AdminSidebar;

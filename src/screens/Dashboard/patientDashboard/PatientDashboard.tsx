@@ -1,14 +1,12 @@
-import PatientSidebar from '@/screens/Dashboard/patientDashboard/PatientSidebar';
-import PatientHomePage from '@/components/PatientHomePage';
+import PatientHomePage from '@/screens/Dashboard/patientDashboard/PatientHomePage';
 import { useState } from 'react';
 import PatientDashboardAppointments from './PatientDashboardAppointments';
-import PatientDashboardMedication from './PatientDashboardMedication';
 import PatientDashboardDoctor from './PatientDashboardDoctor';
-import SensorData from './SensorData';
-import PatientDashboardAnalysis from './PatientDashboardHistory';
 import PatientPrescription from './PatientPrescription';
 import PatientLabreport from './PatientLabreport';
 import PatientDashboardHistory from './PatientDashboardHistory';
+import Sidebar from '../Sidebar';
+import { patientMenuItems } from '@/data/patient_dashboard';
 
 const PatientDashboard = () => {
   const [activeComponent, setActiveComponent] = useState('home');
@@ -27,8 +25,7 @@ const PatientDashboard = () => {
         return <PatientPrescription />;
       case 'lab-report':
         return <PatientLabreport />;
-      case 'sensor data':
-        return <SensorData />;
+
       default:
         return <h1>Welcome to the Dashboard</h1>;
     }
@@ -36,9 +33,10 @@ const PatientDashboard = () => {
   return (
     <div className='w-full h-screen flex flex-col lg:flex-row items-center justify-between bg-gray-50'>
       {/* Sidebar */}
-      <PatientSidebar
+      <Sidebar
         activeComponent={activeComponent} // Pass the active component
         setActiveComponent={setActiveComponent}
+        navItems={patientMenuItems}
       />
       <div className='lg:flex-1 p-4 w-full h-full'>{renderComponent()}</div>
     </div>

@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa6';
 const Footer = () => {
   return (
     // d8f3dc
-    <footer className='bg-white text-[#2d6a4f] p-10 relative'>
+    <footer className='bg-white text-[#2d6a4f] p-10 '>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8'>
         {/* Logo and Tagline */}
         <div>

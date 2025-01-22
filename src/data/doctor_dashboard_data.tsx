@@ -22,8 +22,8 @@ export const menuItems = [
     icon: <FaCalendarAlt size={20} className='text-text-light' />,
   },
   {
-    key: 'pharmacy',
-    label: 'Pharmacy',
+    key: 'prescription',
+    label: 'Prescription',
     icon: <FaPills size={20} className='text-text-light' />,
   },
   {
